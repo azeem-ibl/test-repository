@@ -12,3 +12,17 @@ jobs:
 
     - name: Print out Zama file
       run: cat zama-file
+  
+  print-environment-info:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: List content of the repository
+      run: ls -al
+
+    - name: Get environment space
+      run: df -h
+    
